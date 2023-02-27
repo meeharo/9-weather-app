@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: sans-serif;
+}
+
+.weather {
+    padding: 30px 20px;
+    min-width: 350px;
+    height: 600px;
+    background: no-repeat center/cover;
+    border-radius: 10px;
+    text-align: center;
+    transition: .4s;
+}
+
+.cold {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1)), url(./img/cold.png) no-repeat center/cover;
+}
+
+.cold .weather {
+    background: url(./img/cold.png) no-repeat center/cover;
+}
+
+.hot {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1)), url(./img/hot.png) no-repeat center/cover;
+}
+
+.hot .weather {
+    background: url(./img/hot.png) no-repeat center/cover;
+}
+
+.search {
+    height: 44px;
+    border: none;
+    outline: none;
+    width: 100%;
+    border-radius: 0 15px 0 15px;
+    padding: 0 20px;
+    line-height: center;
+    font-size: 18px;
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 5px 4px rgb(0 0 0 / 20%);
+    transition: .4s;
+}
+
+.search:focus {
+    border-radius: 15px 0 15px 0;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.content {
+    color: #fff;
+}
+
+.capital {
+    margin: 44px 0 6px;
+    text-shadow: 2px 2px rgb(0 0 0 / 50%);;
+    font-size: 35px;
+    white-space: nowrap;
+}
+
+.time {
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+.temperature {
+    margin: auto;
+    width: 235px;
+    height: 144px;
+    background: rgba(255, 255, 255, 0.4) ;
+    border-radius: 15px;
+    box-shadow: 2px 2px 0 2px rgb(0 0 0 / 50%);
+    font-size: 65px;
+    font-weight: 800;
+    text-shadow: 4px 4px rgb(0 0 0 / 60%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.short-desc {
+    margin: 30px 0 40px;
+    font-size: 40px;
+    font-weight: 600;
+    text-shadow: 3px 3px rgb(0 0 0 / 40%);
+}
+
+.detail {
+    display: flex;
+    justify-content: space-between;
+}
+
+.detail > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.detail span {
+    text-align: center;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+.hide {
+    visibility: hidden;
+    opacity: 0;
+}
